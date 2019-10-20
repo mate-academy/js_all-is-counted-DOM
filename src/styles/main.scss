@@ -3,5 +3,30 @@
 @import "typography";
 
 body {
-  background: $c-gray;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #c0e3da;
+  cursor: pointer;
+}
+
+label {
+  outline: none;
+  user-select: none;
+  font-family: 'Lato', sans-serif;
+  font-size: 2.5rem;
+  letter-spacing: 0.04rem;
+  padding: 1.5rem 3rem;
+  border-radius: .4rem;
+  border: .3rem solid #000;
+  background: #fff;
+  position: relative;
+  box-shadow: 0 3px 0 0 #000;
+  cursor: pointer;
+
+  &:active {
+    top: 3px;
+    box-shadow: none;
+  }
 }
