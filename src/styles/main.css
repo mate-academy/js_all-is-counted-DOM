@@ -1,7 +1,14 @@
-@import "utils";
-@import "fonts";
-@import "typography";
+h1 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+}
 
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/Roboto-Regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
 body {
   margin: 0;
 }
@@ -12,10 +19,9 @@ body {
   background: black;
   display: flex;
   justify-content: center;
-
-  &:hover {
-    cursor: pointer;
-  }
+}
+.wrapper:hover {
+  cursor: pointer;
 }
 
 .count-window {
@@ -31,3 +37,5 @@ body {
   border-radius: 50px;
   user-select: none;
 }
+
+/*# sourceMappingURL=main.css.map */
