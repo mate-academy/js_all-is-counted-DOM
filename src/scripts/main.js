@@ -1,11 +1,11 @@
 'use strict';
 
 let counter = sessionStorage.getItem('counter') || 0;
-const span = document.querySelector('span');
+const clickedSpan = document.querySelector('#clicked');
 
-span.innerText = counter;
+clickedSpan.innerText = counter;
 document.addEventListener('click', () => {
   counter++;
-  span.innerText = counter;
+  clickedSpan.innerText = counter;
   sessionStorage.setItem('counter', counter);
 });
