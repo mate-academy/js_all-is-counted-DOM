@@ -1,16 +1,13 @@
 'use strict';
-document.addEventListener("DOMContentLoaded", initCounter);
 
-function clickCounter() {
-  sessionStorage.clickCount = Number(sessionStorage.clickCount) + 1;
-  document.getElementById("count").innerHTML = sessionStorage.clickCount;
-}
+let counter = sessionStorage.getItem('counter') || 0;
+const count = document.getElementById('counter');
+count.textContent = counter;
 
 
-function initCounter() {
-  if(sessionStorage.clickCount === undefined) {
-    sessionStorage.clickCount = 0;
-  }
+document.addEventListener('click' , () => {
+  counter++;
+  count.textContent = counter;
+  sessionStorage.setItem('counter', counter)
 
-  document.getElementById("count").innerHTML = sessionStorage.clickCount;
-}
+});
