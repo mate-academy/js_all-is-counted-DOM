@@ -1,3 +1,10 @@
 'use strict';
+let counter = sessionStorage.getItem('counter') || 0;
+const item = document.getElementById('counter');
+item.textContent = counter;
 
-console.log('hello mate academy!');
+document.addEventListener('click', () => {
+  counter++;
+  item.textContent = counter;
+  sessionStorage.setItem('counter', counter);
+});
