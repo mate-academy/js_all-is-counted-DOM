@@ -1,8 +1,10 @@
 'use strict';
-let counter = sessionStorage.getItem('counter');
+let counter = sessionStorage.getItem('counter') || 0;
+const item = document.getElementById('counter');
+item.textContent = counter;
+
 document.addEventListener('click', () => {
   counter++;
-  document.body.querySelector('.counter')
-    .innerHTML = `You clicked ${counter} times!`;
+  item.textContent = counter;
   sessionStorage.setItem('counter', counter);
 });
