@@ -1,17 +1,13 @@
 'use strict';
-const countWindow = document.querySelector('.count-window');
+const countWindow = document.getElementById('count-window');
 
-const clickerCount = 'clickerCount';
-const getClickerCount = sessionStorage.getItem(clickerCount);
-if (!sessionStorage.getItem(clickerCount)) {
-  sessionStorage.setItem(clickerCount, 0);
-}
-
-countWindow.innerText = getClickerCount;
+let getClicketCount = sessionStorage.getItem('clicketCount') || 0;
+countWindow.innerText = getClicketCount;
 
 document.body.addEventListener('click', (e) => {
-  countWindow.innerText = getClickerCount;
-  sessionStorage.clickerCount++;
+  getClicketCount++;
+  sessionStorage.setItem('clicketCount', getClicketCount);
+  countWindow.innerText = getClicketCount;
   /* control number position, where user click */
   const windowWidth = countWindow.clientWidth;
   const heightWidth = countWindow.clientHeight;
