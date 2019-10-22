@@ -1,17 +1,16 @@
 'use strict';
 
 const identifier = 'clicks';
-const clicked = document.querySelector('.clickInfo');
+const clicked = document.getElementById('clickInfo');
 let counter = sessionStorage.getItem(identifier);
 if (!counter) {
   counter = 0;
 }
 sessionStorage.setItem(identifier, counter);
 
-clicked.textContent = sessionStorage.getItem('clicks');
+clicked.textContent = sessionStorage.getItem(identifier);
 
 document.addEventListener('click', () => {
-  counter++;
-  sessionStorage.setItem(identifier, counter);
+  sessionStorage.setItem(identifier, ++counter);
   clicked.textContent = sessionStorage.getItem(identifier);
 });
