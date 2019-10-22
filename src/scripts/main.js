@@ -1,12 +1,12 @@
 'use strict';
 
-const clickCounter = document.querySelector('.clickCounter');
-let counter = sessionStorage.getItem('clickedNTimes') || 0;
-sessionStorage.setItem('clickedNTimes', counter);
+const clickCounter = document.getElementById('clickCounter');
+const timesClicked = 'timesClicked';
+let counter = sessionStorage.getItem(timesClicked) || 0;
 
-clickCounter.textContent = sessionStorage.getItem('clickedNTimes');
+clickCounter.textContent = sessionStorage.getItem(timesClicked);
 
 document.addEventListener('click', () => {
-  sessionStorage.setItem('clickedNTimes', ++counter);
-  clickCounter.textContent = sessionStorage.getItem('clickedNTimes');
+  sessionStorage.setItem(timesClicked, ++counter);
+  clickCounter.textContent = counter;
 });
