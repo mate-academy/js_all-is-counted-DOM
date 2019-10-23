@@ -13,4 +13,4 @@
 
 **Result**
 
-- [DEMO LINK](https://crazynoodl.github.io/js_all-is-counted-DOM/index.html/)
+- [DEMO LINK](https://crazynoodl.github.io/js_all-is-counted-DOM/index.html)
