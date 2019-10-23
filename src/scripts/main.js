@@ -1,3 +1,11 @@
 'use strict';
+const body = document.querySelector('body');
+const div = document.querySelector('div');
+let clicked = sessionStorage.getItem('counter') || 0;
+div.textContent = clicked;
 
-console.log('hello mate academy!');
+body.addEventListener('click', () => {
+  clicked++;
+  div.textContent = clicked;
+  sessionStorage.setItem('counter', clicked);
+});

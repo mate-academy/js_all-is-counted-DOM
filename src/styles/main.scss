@@ -4,4 +4,11 @@
 
 body {
   background: $c-gray;
+  height: 100vh;
+}
+
+div {
+  font-size: 50px;
+  font-weight: 700;
+  text-align: center;
 }
