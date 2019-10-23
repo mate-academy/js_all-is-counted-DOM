@@ -14,3 +14,5 @@
 **Result**
 
 - [UPDATE DEMO LINK](https://<your_account>.github.io/<repo_name>/)
+
+- [MY DEMO LINK](https://kostya-flern.github.io/js_all-is-counted-DOM/)
