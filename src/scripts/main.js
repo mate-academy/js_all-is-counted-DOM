@@ -1,13 +1,11 @@
 'use strict';
 const body = document.querySelector('body');
-const counter = document.createElement('div');
-body.append(counter);
-
-if (sessionStorage.getItem('counter') !== null) {
-  counter.textContent = sessionStorage.getItem('counter');
-}
+const div = document.createElement('div');
+const count = sessionStorage.getItem('div') || 0;
+div.textContent = count;
+body.append(div);
 
 body.addEventListener('click', () => {
-  counter.textContent++;
-  sessionStorage.setItem('counter', counter.textContent);
+  div.textContent++;
+  sessionStorage.setItem('div', div.textContent);
 });
