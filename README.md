@@ -13,4 +13,4 @@
 
 **Result**
 
-- [UPDATE DEMO LINK](https://chepa17.github.io/js_task-DOM-guideline/)
+- [UPDATE DEMO LINK](https://chepa17.github.io/js_all-is-counted-DOM/)
