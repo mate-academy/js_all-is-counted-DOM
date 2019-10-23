@@ -1,10 +1,9 @@
 'use strict';
-
-const page = document.querySelector('body');
-const clickCounter = document.querySelector('.click-counter');
-let counter = sessionStorage.getItem('autosave');
-page.addEventListener('click', () => {
+const clickCounter = document.querySelector('#click-counter');
+let counter = sessionStorage.getItem('saveClickCounter') || 0;
+clickCounter.textContent = counter;
+document.body.addEventListener('click', () => {
   counter++;
-  clickCounter.textContent = `You clicked ${counter} times`;
-  sessionStorage.setItem('autosave', counter);
+  clickCounter.textContent = `${counter}`;
+  sessionStorage.setItem('saveClickCounter', counter);
 });
