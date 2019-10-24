@@ -7,5 +7,5 @@ counter.textContent = clickTime;
 document.body.addEventListener('click', () => {
   clickTime++;
   counter.textContent = clickTime;
-  sessionStorage.setItem('counter', clickTime);
+  sessionStorage.setItem('count', clickTime);
 });
