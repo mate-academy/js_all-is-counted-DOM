@@ -1,0 +1,33 @@
+h1 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/Roboto-Regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  background: #eee;
+  overflow: hidden;
+}
+
+.logo {
+  width: 100%;
+  height: 100vh;
+}
+
+.timer {
+  font-size: 48px;
+  font-weight: 700;
+  text-align: center;
+  width: 500px;
+  position: absolute;
+  top: 30px;
+  left: calc(50vw - 250px);
+  z-index: 1;
+}
+/*# sourceMappingURL=main.css.map */
